@@ -1,272 +1,338 @@
 <div id="showcase" class="noselect animated fadeInLeft">
-	<div class="row" style="position: relative;left: -40px">
-  	<div class="col-lg-8">
-    	<div class="cards left" id="umb" style="text-align: left">
+<!-- Showcase Section: Main interactive area with tabs and foraminifera images -->
+	<div class="row" style="position: relative; left: -40px">
+  	<div class="col-lg-12">
+      <div class="cards left" id="umb" style="text-align: left; width: 100%;">
         <input type="hidden" id="active_tab" value="1" />
-        <img src="assets/img/foratitle.png" style="position: absolute;left: 500px;top:-50px">
-        <img src="assets/img/bgtbl_1.png">
+        <img src="assets/img/foratitle.png" style="position: absolute;left: 600px;top:-50px">
+        <img src="assets/img/contentbg.png" style="width: 125%; height: 100%; object-fit: cover; display: block; margin: 0; padding: 0;">
+        <img src="assets/img/bgtbl.png" style="position: absolute;top: 150px;width: 35%;left: 82px;z-index: 9998">
         <div onclick="tabActive(1)" class="tabtbl1 tabactive">
-          <span style="letter-spacing: 10px;color: #FFF;font-size: 20px;position: relative;left: 9px">Foraminifera Besar</span>
+          <span style="letter-spacing: 10px;color: #FFF;font-size: 20px;position: relative;left: 9px">Kotak 1</span>
         </div>
         <div onclick="tabActive(2)" class="tabtbl2">
-          <span style="letter-spacing: 10px;color: #FFF;font-size: 20px;position: relative;left: 9px">Foraminifera Besar 2</span>
+          <span style="letter-spacing: 10px;color: #FFF;font-size: 20px;position: relative;left: 9px">Kotak 2</span>
         </div>
         <div onclick="tabActive(3)" class="tabtbl3">
-          <span style="letter-spacing: 10px;color: #FFF;font-size: 20px;position: relative;left: 9px">Foraminifera Mikroskopik</span>
+          <span style="letter-spacing: 4px;color: #FFF;font-size: 20px;position: relative;left: 9px">Kotak 3</span>
         </div>
-        <table class="tablecontent1" style="position: absolute;top: 172px;width: 45%;left: 132px;z-index: 9999">
+
+
+        <!-- TABEL 1 -->
+        <table class="tablecontent1" style="position: absolute;top: 200px;width: 45%;left: 132px;z-index: 9999">
           <tr>
-            <td width="10" onclick="changeContent('A1')"><img src="assets/img/table/A1.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA1" style="display: none;">
-                <p>Foraminifera adalah  </p>
+            <td width="10" onclick="changeContent('A1')"><img src="assets/img/table/A1.webp" width="30" style="margin-bottom: 17px;" />
+              <div class="descA1" style="display: none;" data-title="Discocyclina sp.">
+                <p>Test large, microspheric test up to 23 mm in diameter, discoidal to lenticular, thin or centrally inflated, megalospheric embryo with small subglobular protoconch embraced by larger reniform deuteroconch, first nepionic cycle of chambers may be larger than the subsequent ones, radial partitions in equatorial chambers form concentric annuli of rectangular chamberlets, those of successive cycles alternating in position, adjacent chamberlets of an annulus connected by annular stolons at the proximal end of the radial walls, those of successive annuli connected by two or three radial stolons at different levels, about fifteen tiers of prominent lateral chambers comprise most of the test thickness, vertical stolons connect chamberlets of the equatorial layer with the lateral chambers, well-developed pillars end in surface papillae; wall calcareous, with dark median lines representing interseptal spaces or fissures but not true canals, surface granulate. M. Paleocene to U. Eocene; cosmopolitan, tropical and temperate. (Loeblich & Tappan, 1987, Foraminiferal Genera and Their Classification)</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A2')"><img src="assets/img/table/A2.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA2" style="display: none;">
-                 <p>Forammmmm kak a2</p>
+            <td width="10" onclick="changeContent('A2')"><img src="assets/img/table/A2.jpg" width="30" style="margin-bottom: 17px;" />
+              <div class="descA2" style="display: none;" data-title="Cycloclypeus sp.">
+                 <p>Oligosen/Oligocene<br>Gua Pawon, Padalarang, Jawa Barat</br><br>Ket: Dalam Batugamping</br></p>
               </div>
             </td>
             <td width="10" onclick="changeContent('A3')"><img src="assets/img/table/A3.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA3" style="display: none;">
-                <p>Ini adalah foram a3</p>
+              <div class="descA3" style="display: none;" data-title="Assilina spira de Roissy">
+                <p>Eosen/Eocene<br>Assilina spira de Roissy</br></p>
               </div>
             </td>
+            </tr>
+             <tr>
             <td width="10" onclick="changeContent('A4')"><img src="assets/img/table/A4.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA4" style="display: none;">
+              <div class="descA4" style="display: none;" data-title="Nummulites sp.">
                  <p>a4</p>
               </div>
             </td>
             <td width="10" onclick="changeContent('A5')"><img src="assets/img/table/A5.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA5" style="display: none;">
+              <div class="descA5" style="display: none;" data-title="Aleveolina elliptica">
                 <p>a5</p>
               </div>
             </td>
+            <td width="10" onclick="changeContent('A6')"><img src="assets/img/table/A6.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descA6" style="display: none;" data-title="Discocyclina sp.">
+                <p>a6</p>
+              </div>
+            </td>
+          </tr>
 
-          </tr>
+
+        <!-- TABEL 2 -->
         </table>
-        <table class="tablecontent2" style="position: absolute;top: 172px;width: 45%;left: 132px;z-index: 9999">
+        <table class="tablecontent2" style="position: absolute;top: 200px; width: 45%; z-index: 9999; left: 102px;">
           <tr>
-            <td width="10" onclick="changeContent('A1')"><img src="assets/img/table/A1.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA1" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <td width="10" onclick="changeContent('B1')" style="padding-left: 140px;"><img src="assets/img/table/B1.png" width="30" style="margin-bottom: 17px;"  />
+              <div class="descB1" style="display: none;" data-title="Discocyclina sp.">
+                <p>B1</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A2')"><img src="assets/img/table/A2.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA2" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <td width="10" onclick="changeContent('B2')" style="padding-left: 140px;"><img src="assets/img/table/B2.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descB2" style="display: none;" data-title="Nummulites sp.">
+                 <p>B2</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A3')"><img src="assets/img/table/A3.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA3" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </tr>
+
+            <tr>
+            <td width="10" onclick="changeContent('B3')"><img src="assets/img/table/B3.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descB3" style="display: none;" data-title="Frabellum avicula Muchelin"> 
+                <p>B3</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A4')"><img src="assets/img/table/A4.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA4" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <td width="10" onclick="changeContent('B4')"><img src="assets/img/table/B4.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descB4" style="display: none;" data-title="Discocyclina javana Verbeeki">
+                 <p>B4</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A5')"><img src="assets/img/table/A5.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA5" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <td width="10" onclick="changeContent('B5')"><img src="assets/img/table/B5.png" width="30" style="margin-bottom: 17px; left: 132px;" />
+              <div class="descB5" style="display: none;" data-title="Heterostigma V.d Vlerk">
+                <p>B5</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A6')"><img src="assets/img/table/A6.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA6" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+          </tr>
+          
+          <tr>
+            <td width="10" onclick="changeContent('B6')"><img src="assets/img/table/B6.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descB6" style="display: none;" data-title="Heterostegina assilinoides">
+                 <p>B6</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A7')"><img src="assets/img/table/A7.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA7" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <td width="10" onclick="changeContent('B7')"><img src="assets/img/table/B7.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descB7" style="display: none;" data-title="Ricordei toxaste">
+                <p>B7</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A8')"><img src="assets/img/table/A8.png" width="30" style="margin-bottom: 17px;" />
-             <div class="descA8" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <td width="10" onclick="changeContent('B8')"><img src="assets/img/table/B8.png" width="30" style="margin-bottom: 17px;" />
+             <div class="descB8" style="display: none;" data-title="Lepidocyclina sp.">
+                 <p>B8</p>
               </div></td>
-          </tr>
-          <tr>
-            <td width="10" onclick="changeContent('A1')"><img src="assets/img/table/B1.png" width="30" style="margin-bottom: 20px;" />
-              <div class="descA1" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </tr>
+
+            <tr>
+            <td width="10" onclick="changeContent('B9')" style="padding-left: 140px;"><img src="assets/img/table/B9.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descB9" style="display: none;" data-title="Miogypsina lamp">
+                <p>B9</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A2')"><img src="assets/img/table/B2.png" width="30" style="margin-bottom: 20px;" />
-              <div class="descA8" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <td width="10" onclick="changeContent('B10')" style="padding-left: 140px;"><img src="assets/img/table/B10.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descB10" style="display: none;" data-title="Spiroclypeus sp.">
+                 <p>B10</p>
               </div>
             </td>
-           
           </tr>
+
         </table>
-        <table class="tablecontent3" style="position: absolute;top: 172px;width: 45%;left: 132px;z-index: 9999">
+
+
+        <!-- TABEL 3 -->
+        <table class="tablecontent3" style="position: absolute;top: 200px;width: 45%;left: 132px;z-index: 9999">
           <tr>
-            <td width="10" onclick="changeContent('A1')"><img src="assets/img/table/A1.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA1" style="display: none;">
-                <p>Quinqueloculina adalah </p>
+            <td width="10" onclick="changeContent('C1')"><img src="assets/img/table/C1.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descC1" style="display: none;" data-title="Spiroloculina">
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A2')"><img src="assets/img/table/A2.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA2" style="display: none;">
-                 <p>Pyrgo adalah</p>
+            <td width="10" onclick="changeContent('C2')"><img src="assets/img/table/C2.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descC2" style="display: none;" data-title="Ammobaculites">
+                <h5>Karakteristik</h5>
+                <p>Cangkang membentuk spiral datar (planispiral) yang kemudian berkembang menjadi deretan uniserial besar, memanjang, lurus atau melengkung, biasanya terdiri dari tiga atau lebih ruang (chamber). Terdapat sebuah umbilikus kecil dan cekung yang tampak di pusat spiral datar. Ruang-ruangnya agak menggembung dan dipisahkan oleh sutures yang sedikit cekung. Dinding cangkang tidak berongga dan tersusun secara kasar dari partikel yang direkatkan dengan non-calcareous cement. Apertur utama berbentuk bulat dan terletak di ujung cangkang. </p>
+                <h5>Habitat</h5>
+                <p>Spesies ini tersebar secara global. Tercatat hidup di zona netritik tengah hingga zona abisal, serta dari zona netritik luar hingga zona abisal.</p>
+                <h5>Persebaran/Catatan Temuan</h5>
+                <p>Brady (1884) mencatat keberadaan spesies ini dari sembilan stasiun ekspedisi “Challenger” di Atlantik Utara, pada kedalaman antara 530 - 2750 depa. 
+Dua stasiun di Atlantik Selatan mencatatnya pada kedalaman 2200 dan 2900 depa. 
+Sebanyak 12 stasiun di wilayah Pasifik Atlantik mencatatnya pada rentang kedalaman antara 2 hingga 3125 depa. 
+Cushman (1920) melaporkan temuan dari 30 stasiun ekspedisi “Albatross” di Atlantik Utara, dengan kedalaman antara 27 hingga 2369 depa. 
+</p>
+                <hr>
+                <p>​​(Holbourn et al., 2013)​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A3')"><img src="assets/img/table/A3.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA3" style="display: none;">
-                <p>Planulina adalah</p>
+            <td width="10" onclick="changeContent('C3')"><img src="assets/img/table/C3.jpg" width="30" style="margin-bottom: 17px;" />
+              <div class="descC3" style="display: none;" data-title="Spiroloculina">
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A4')"><img src="assets/img/table/A4.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA4" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <td width="10" onclick="changeContent('C4')"><img src="assets/img/table/C4.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descC4" style="display: none;" data-title="Vulvulina">
+                 <h5>Karakteristik</h5>
+                 <p>Cangkang tipe free test atau tidak melekat pada substrat, hidup bebas di dasar laut atau melayang di kolom air. Penampang cangkang melebar atau memanjang, berbentuk seperti  belah ketupat (lozenge-shaped) atau romboid dalam penampang, tepi tajam dan berangulasi. 
+Bagian awal menggulung secara planispiral pada generasi mikrosferik. Pada tahap berikutnya, chambers tersusun secara biserial (dua baris), sangat lebar dan rendah, serta melengkung kuat ke arah belakang menuju proloculus (chamber pertama). Pada spesimen yang berkembang dengan baik, susunan chamber dapat menjadi uniserial (satu baris) pada tahap akhir. Sutura tampak jelas. Dinding cangkang tersusun dari material agglutinasi halus dengan permukaan halus yang rata. 
+Apertur berupa lengkung rendah di bagian dalam tepi (interiomarginal arch) pada tahap awal, kemudian berkembang menjadi terminal berupa celah sempit dan memanjang. 
+</p>
+                 <h5>Habitat</h5>
+                 <p>V. pennatula dari genus Vulvulina ditemukan pada kedalaman antara 350 hingga 675 depa di stasiun “Challenger” (Jones, 1994) dan antara 344 hingga 1760 meter di perairan Indonesia (van Marle, 1991). 
+​​(Holbourn et al., 2013)
+</p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p>Tersebar secara kosmopolitan (tersebar luas di berbagai wilayah dunia). </p>
+                 <hr>
+                 <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A5')"><img src="assets/img/table/A5.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA5" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <td width="10" onclick="changeContent('C5')"><img src="assets/img/table/C5.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descC5" style="display: none;" data-title="Triloculina">
+                <h5>Karakteristik</h5>
+                 <p>Cangkang memiliki chambers awal bertipe quinqueloculine, setidaknya pada bentuk mikrosferik. Tahap selanjutnya berbentuk pseudoiriloculine atau triloculine. Berbentuk oval dari tampak atas dan tampak segitiga sama sisi atau agak segitiga secara penampang. Chambers berikutnya berada dalam bidang yang saling berjarak 120°, masing-masing dalam bidang yang sama dengan chamber ketiga dan menutupinya sehingga bagian luar cangkang hanya terdiri dari tiga chamber yang tampak dan tiap chamber tidak memuliki dasar. Ruang-ruangnya tidak bersifat labyrinthic. Dinding cangkang tersusun dari kalsit bertekstur porcellanous, tanpa pori dan terkadang memiliki lapisan luar berbutir pasir (arenaceous). Apertur berbentuk bulat pada ujung final chamber, biasanya dilengkapi dengan struktur tooth-like pendek bercabang dua (short bifid tooth).</p>
+                 <h5>Habitat</h5>
+                 <p>T. tricarinata dari genus Triloculina ditemukan pada zona neritik hingga abyssal bagian atas. Kedalaman tercatat antara 6 hingga 2350 fathom (±11 hingga 4295 meter) berdasarkan laporan dari stasiun “Challenger” (Jones, 1994).</p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p>Tersebar secara kosmopolitan </p>
+                 <hr>
+                 <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A6')"><img src="assets/img/table/A6.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA6" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <td width="10" onclick="changeContent('C6')"><img src="assets/img/table/C6.png" width="30" style="margin-bottom: 17px;" />
+              <div class="descC6" style="display: none;" data-title="Planorbulina">
+                 <h5>Karakteristik</h5>
+                 <p>Cangkang pada tahap awal berupa trochospiral coil rendah dengan arah coil acak, melekat pada substrat melalui sisi spiral. Proloculus mikrosferik berdiameter 11–14 μm, sedangkan proloculus megalosferik berdiameter 23–56 μm. Chambers paling awal berbentuk sedikit trochoid, berpilin rapat, berkembang menjadi deret tidak beraturan dalam satu lapisan di sekitar periphery. Chambers selanjutnya memiliki dua apertur dan masing-masing menghasilkan chambers biapertural baru sehingga terbentuk banyak spiral dan akhirnya terbentuk whorl dari chamber. Sutura jelas, dapat menebal dan menonjol pada sisi yang melekat, tetapi umumnya cekung pada sisi yang bebas. Periphery membulat hingga agak bersudut. 
+Dinding pada chambers bersifat kitin (chitinous), lalu menjadi kalsit (calcareous) dengan perforasi kasar (coarsely perforate).
+</p>
+                 <h5>Habitat</h5>
+                 <p>-</p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p>Tersebar secara kosmopolitan</p>
+                 <hr>
+                 <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A7')"><img src="assets/img/table/A7.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA7" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </tr>
+
+            <tr>
+            <td width="10" onclick="changeContent('C7')"><img src="assets/img/table/C7.jpg" width="30" style="margin-bottom: 17px;" />
+              <div class="descC7" style="display: none;" data-title="Alveolinella quoyi">
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A8')"><img src="assets/img/table/A8.png" width="30" style="margin-bottom: 17px;" />
-             <div class="descA8" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <td width="10" onclick="changeContent('C8')"><img src="assets/img/table/C8.jpg" width="30" style="margin-bottom: 17px;" />
+             <div class="descC8" style="display: none;" data-title="Virgulina mexicana">
+                 <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div></td>
-          </tr>
-          <tr>
-            <td width="10" onclick="changeContent('A1')"><img src="assets/img/table/B1.png" width="30" style="margin-bottom: 20px;" />
-              <div class="descA1" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <td width="10" onclick="changeContent('C9')"><img src="assets/img/table/C9.jpg" width="30" style="margin-bottom: 20px;" />
+              <div class="descC9" style="display: none;" data-title="Clavulina">
+                <h5>Karakteristik</h5>
+                 <p>Cangkang memanjang, tersusun triserial, penampang melintang berbentuk segitiga. Chambers sederhana, pada bagian selanjutnya berkembang menjadi uniserial dan rectilinear setelah tahap triserial. Dinding bersifat arenaceous hingga agglutinated, permukaannya dapat sangat kasar hingga relatif halus. Pada beberapa spesies, penambahan chamber baru mengjasilkan penambahan floor imperforate (tidak berpori) sehingga sekat (septa) menjadi berlapis ganda secara sekunder.  
+Apertur pada tahap triserial awal bersifat interiomarginal. Pada individu dewasa terletak di bagian terminal, berbentuk membulat atau berlobus, dikelilingi oleh (rim) imperforate, serta umumnya dilengkapi dengan gigi apertural yang menutupi sebagian apertur sehingga bentuknya menjadi semilunate, lalu memanjang ke dalam melalui chamber sehingga melekat pada chamber sebelumnya.
+</p>
+                 <h5>Habitat</h5>
+                 <p>-</p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p>-</p>
+                 <hr>
+                 <p>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A2')"><img src="assets/img/table/B2.png" width="30" style="margin-bottom: 20px;" />
-              <div class="descA8" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <td width="10" onclick="changeContent('C10')"><img src="assets/img/table/C10.png" width="30" style="margin-bottom: 20px;" />
+              <div class="descC10" style="display: none;" data-title="Uvigerina">
+                 <h5>Karakteristik</h5>
+                 <p>Cangkang umumnya tersusun secara triseral (tiga baris), berbentuk memanjang dan fusiform (gelendong) dengan penampang melintang yang membulat. Chambers awal saling menempel rapat, sedangkan chambers berikutnya tampak menggembung, berbentuk bulat, relatif lebih tinggi dan tersusun lebih longgat dalam pola triseral. Dinding tersusun dari kalsium bikarbonat (calcareous) dan perforate (berpori) dengan permukaan yang dihiasi oleh costae  atau striae longitudinal berbentuk pipih.  Apertur terminal, berbentuk bulat dan biasanya menonjol pada sebuah leher. Bagian tepi apertur dibatasi oleh phialine lip dan secara internal dilengkapi dengan toothplate hemisilindris yang dapat memiliki tonjolan mirip sayap pada salah satu sisi, serta berfungsi sebagai penghubung apertur dengan foramen sebelumnya. Pada beberapa spesies, apertura ini juga menunjukkan keunikan berupa spiral tooth (gigi spiral) dan saluran dalam yang berpilin (twisted canal), memberikan variasi tambahan dalam struktur apertural.</p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p>Tersebar secara kosmopolitan</p>
+                 <hr>
+                 <p>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A3')"><img src="assets/img/table/B3.png" width="30" style="margin-bottom: 20px;" />
-              <div class="descA1" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <td width="10" onclick="changeContent('C11')"><img src="assets/img/table/C11.png" width="30" style="margin-bottom: 20px;" />
+              <div class="descC11" style="display: none;" data-title="Quinqueloculina parkeri">
+                <h5>Karakteristik</h5>
+                 <p>Cangkang berbentuk oval dalam tampilan luar. Chambers awal tersusun quinqueloculine, baik pada generasi mikrosferik maupun megalosferik, atau dapat berupa cryptoquinqueloculine tergantung pada derajat tumpang tindih antar chamber berturut-turut. Cangkang memiliki pola coil dalam lima chambers, setiap chamber memiliki panjang one-half coil. Setiap chamber berjarak 72° dari chamber berikutnya, tetapi 144° dari chamber sebelumnya secara langsung. Lima chambers menyelesaikan satu siklus yang berupa dua coil mengelilingi sumbu secara penampang, namun secara longitudinal membentuk two-half coil.  Umumnya terdapat lima chambers yang tampak dari luar, empat chambers terlihat dari satu sisi, dan tiga chamber dari sisi sebaliknya. Chambers memiliki dasar (floor) setidaknya pada tahap dewasa. Dinding bersifat kalsit (calcarous), tidak berpori (imperforate), dan porcelaneous. Apertur di ujung chamber, berbentuk oval, rata dengan permukaan, dilangkapi dengan bifid tooth (gigi bercabang dua).</p>
+                 <h5>Habitat</h5>
+                 <p>Umum ditemukan di dataran terumbu dan seluruh lingkungan dangkal di backreef tempat spesimen hidup berada. Cangkang kosong kadang terbawa ke area sekitar terumbu karang periferal. </p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p>Tersebar secara kosmopolitan. 
+Kelompok ini tercatat dengan representasi yang kuat di Kompleks Terumbu Pulau Lizard. 
+Spesies dari genus Quinqueloculina dan taksa terkait telah menjajah seluruh lingkungan laut di terumbu modern secara umum, dan khususnya di Great Barrier Reef. Kelompok ini masih kurang dipelajari, baik dari sudut pandang ekologi maupun sistematika. Studi laboratorium (misalnya oleh Schnitker, 1967) serta penelitian lapangan (Brasier, 1972, 1975, 1976, dan lainnya) menunjukkan tingkat variasi dalam spesies yang sangat besar, nilai relatif batas-batas genus, dan respons ekologis terhadap kondisi kehidupan yang beragam dalam kelompok ini.
+</p>
+                 <hr>
+                 <p>Baccaert, 1987<br>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A4')"><img src="assets/img/table/B4.png" width="30" style="margin-bottom: 20px;" />
-            <div class="descA8" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <td width="10" onclick="changeContent('C12')"><img src="assets/img/table/C12.jpg" width="30" style="margin-bottom: 20px;" />
+            <div class="descC12" style="display: none;" data-title="Bulimina">
+                 <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p> 
               </div></td>
-            <td width="10" onclick="changeContent('A5')"><img src="assets/img/table/B5.png" width="30" style="margin-bottom: 20px;" />
-             <div class="descA1" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div></td>
-            <td width="10" onclick="changeContent('A6')"><img src="assets/img/table/B6.png" width="30" style="margin-bottom: 20px;" />
-              <div class="descA8" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-              </div></td>
-            <td width="10" onclick="changeContent('A7')"><img src="assets/img/table/B7.png" width="30" style="margin-bottom: 20px;" />  <div class="descA1" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div></td>
-            <td width="10" onclick="changeContent('A8')"><img src="assets/img/table/B8.png" width="30" style="margin-bottom: 20px;" /> <div class="descA8" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-              </div></td>
-          </tr>
-          <tr>
-            <td width="10" onclick="changeContent('A1')"><img src="assets/img/table/A1.png" width="30" style="margin-bottom: 15px;" />
-              <div class="descA1" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-            </td>
-            <td width="10" onclick="changeContent('A2')"><img src="assets/img/table/A2.png" width="30" style="margin-bottom: 15px;" />
-              <div class="descA2" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-              </div>
-            </td>
-            <td width="10" onclick="changeContent('A3')"><img src="assets/img/table/A3.png" width="30" style="margin-bottom: 15px;" />
-              <div class="descA3" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-            </td>
-            <td width="10" onclick="changeContent('A4')"><img src="assets/img/table/A4.png" width="30" style="margin-bottom: 15px;" />
-              <div class="descA4" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-              </div>
-            </td>
-            <td width="10" onclick="changeContent('A5')"><img src="assets/img/table/A5.png" width="30" style="margin-bottom: 15px;" />
-              <div class="descA5" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-            </td>
-            <td width="10" onclick="changeContent('A6')"><img src="assets/img/table/A6.png" width="30" style="margin-bottom: 15px;" />
-              <div class="descA6" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-              </div>
-            </td>
-            <td width="10" onclick="changeContent('A7')"><img src="assets/img/table/A7.png" width="30" style="margin-bottom: 15px;" />
-              <div class="descA7" style="display: none;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-            </td>
-            <td width="10" onclick="changeContent('A8')"><img src="assets/img/table/A8.png" width="30" style="margin-bottom: 15px;" />
-             <div class="descA8" style="display: none;">
-                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-              </div></td>          
-          </tr>
-          <tr>
+            </tr>
             
+          <tr>
+            <td width="10" onclick="changeContent('C13')"><img src="assets/img/table/C13.jpg" width="30" style="margin-bottom: 20px;" />
+             <div class="descC13" style="display: none;" data-title="Pyrgo">
+                <h5>Karakteristik</h5>
+                 <p>Cangkang berbentuk oval pada tampak luar, terkompresi pada bagian tengah antara dua chamber yang berlawanan dengan periphery (tepi tubuh) bersudut hingga membentuk carina. Chambers berbentuk half coil, pada bentuk mikrosferik memiliki susunan awal quinqueloculine hingga cryptoquinqueloculine, diikuti oleh deretan triloculine. Pada tahap dewasa berbentuk biloculine. Dua chamber membentuk eksterior dan interiornya sederhana. Dinding bersifat kalsit (calcareous), tidak berpori (imperforate), dan porcelaneous. Aperture pada ujung final chamber, berbentuk oval, dengan bifid tooth (gigi becabang dua) yang lebar.</p>
+                 <h5>Habitat</h5>
+                 <p>P. comata ditemukan pada zona neritik hingga abisal. Dilaporkan berada pada kedalaman antara 15 hingga 2.900 depa laut di stasiun “Challenger” (Jones, 1994). 
+P. lucernula pada zona bathyal tengah hingga abisal. Dilaporkan berada pada kedalaman antara 300 hingga 1.000 depa laut di stasiun “Challenger” 
+</p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p>Tersebar secara kosmopolitan</p>
+                 <hr>
+                 <p>Jones, 1994.<br>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988
+</p>
+                </div></td>
+            <td width="10" onclick="changeContent('C14')"><img src="assets/img/table/C14.jpg" width="30" style="margin-bottom: 20px;" />
+              <div class="descC14" style="display: none;" data-title="Guttulina">
+                 <h5>Karakteristik</h5>
+                 <p>Cangkang berbentuk oval hingga memanjang dengan chambers yang menggembung, tersusun pada bidang yang berjarak 144° satu sama lain, membentuk susunan quinqueloculine, dimana setiap chamber baru yang terbentuk tersusun semakin menjauh dari bagian basal cangkang, memanjang ke arah distal, serta menutupi ruang sebelumnya secara proksimal. Sutura tampak jelas dan cekung. Dinding bersifat berkapur (calcareous), transparan atau bening (hyaline), tersusun secara radial, dengan permukaan yang halus. Apertur terminal berbentuk radial. </p>
+                 <h5>Habitat</h5>
+                 <p>-</p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p>Tersebar secara kosmopolitan. </p>
+                 <hr>
+                 <p>Cushman, 1928; Loeblich & Tappan, 1988</p>
+                 </div></td>        
           </tr>
+         
         </table>
         <div style="position: absolute;top:30px;right: 0px">
-        <img src="assets/img/frame.png" style="position: absolute;right: -140px;top:82px;z-index: 99">
-        <img id="imgreal" src="assets/img/A1real.png" style="position: absolute;right: -137px;top: 87px;z-index: 98">
+        <!-- <img src="assets/img/frame.png" style="position: absolute;right: -140px;top:82px;z-index: 99">-->
+        <img id="imgreal" src="assets/img/foraminifera.jpg" style="position: absolute;right: -135px;top:87px;z-index: 98;width:463px;height:333px;object-fit:contain">
         <!-- <img src="assets/img/bgreal.png" style="position: absolute;right: -140px;top:82px;z-index: 97"> -->
-        <span style="background: url('assets/img/titlerealbg.png') no-repeat;width: 252px;height: 64px;z-index: 99999;position: absolute;top: 355px;left: -190px;text-align: center;padding: 5px; font-family: 'TitleFontLittle';line-height: 25px;
-  font-size: 24px;font-weight: 600;color: #fff;text-shadow: 3px 3px 3px #000;">Foraminiferan Microfosil</span>
+        <span id="titleText" style="background: url('assets/img/titlerealbg.png') no-repeat;width: 252px;height: 64px;z-index: 99999;position: absolute;
+        top: 380px;left: -220px;
+        text-align: center;padding: 5px; font-family: 'TitleFontLittle';line-height: 50px;
+        font-size: 24px;font-weight: 600;color: #fff;text-shadow: 3px 3px 3px #000;">Foraminifera</span>
     	  </div>
+          <!-- Description Section: Shows details about selected foraminifera -->
         <div id="showDesc" style="position: absolute;right: -105px;bottom: 155px;width: 400px;max-height: 212px;overflow-y: scroll">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Foraminifera, atau disingkat foram, adalah grup besar protista amoeboid dengan pseudopodia. Dalam sains modern, istilah foraminifera digunakan sebagai bentuk tunggal atau jamak dari kelompok ini dan sering kali ditulis dalam lowercase. Cangkang atau kerangka foraminifera merupakan petunjuk dalam pencarian sumber daya minyak, gas alam dan mineral. Pada beberapa genus, cangkang dari foraminifera tersusun dari kitin. Sebagian besar foraminifera hidup di laut, mayoritas hidup di dasar laut (bentos), dan beberapa hidup mengapung di perairan (plankton). Beberapa diketahui hidup di perairan air tawar, dan beberapa spesies diketahui hidup di terestrial dan telah teridentifikasi melalui analisis molekuler dari DNA ribosomal.</p>
          
         </div>
       </div>
-    </div>
-  	<div class="col-lg-4">
-    	<div class="cards right" id="fosil" style="text-align: center">
-        <img src="assets/img/bgright.png" style="position: relative;
-    top: 45px;
-    left: 31px;">
-        <div style="position: absolute;top:45px;left:31px;background: url('assets/img/bgvideo.png') no-repeat;width: 577px;height: 343px">
-          <div class="bigplay1"><img src="assets/img/bigplay.png" width="150"></div>
-          <video id="video1" class="video1" style="width: 577px;height: 325px;border-radius: 30px 30px 0px 0px" data-id="1">
-            <source src="assets/video/01.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div style="position: absolute;top:386px;left:31px;background: url('assets/img/bgcontroler.png') no-repeat;width: 577px;height: 55px">
-          <div id="play" onclick="tooglePlayPause(1)">
-            <img id="play1" style="width: 35px;position: absolute;height: auto;left: 15px;top: 10px;" src="assets/img/play.png">
-            <img id="pause1" style="width: 35px;position: absolute;height: auto;left: 15px;top: 10px;" src="assets/img/pause.png">
-          </div>
-          <div class="barbg">
-            <div class="bar1"></div>
-            <input  type="range" id="seekbar1" min="0" max="100" step="1" value="0">
-            <div class="volume" id="volume" onclick="volume(1)" data-id="1">
-              <img src="assets/img/volume.png" width="34" />
-              <div class="bgslidervolume1" data-id="false">
-                <input class="vol" style="" id="volumeslider1" type="range" min="0" max="100" value="100" step="1">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style="position: absolute;bottom:-55px;left:70px;">
-          <img src="assets/img/btmright.png" />
-        </div>
-      </div>
-    </div>
 	</div>
 </div>
 
@@ -282,84 +348,66 @@
     $('.tablecontent4').hide();
     $('.bgslidervolume1').hide();
   });
-  function changeContent(val){
-    var descInner = $('.desc'+val).html();
-    $("#imgreal").attr('src', 'assets/img/'+val+'real.png');
-    $("#showDesc").html(descInner);
-  }
-  function volume(id){
-    var check = $('.bgslidervolume'+id).data("id");
-    // alert(id);
-    if(check == false){
-    $('.bgslidervolume'+id).fadeIn(1000);
-    $('.bgslidervolume'+id).data("id", true);
-    }else{
-    $('.bgslidervolume'+id).fadeOut('slow');
-    $('.bgslidervolume'+id).data("id", false);
-    }
-  }
-  function tabActive(id){
-    var lia = $('#active_tab').val();
-    $('.tabtbl'+lia).removeClass('tabactive');
-    $('.tablecontent'+lia).fadeOut('slow');
-    $('#active_tab').val(id)
-    $('.tabtbl'+id).addClass('tabactive');
-    $('.tablecontent'+id).fadeIn(1000);
 
-  }
-  var vidplay, seekslider, seekbar, volumeslider;
-    function intializePlayer(dat){
-      console.log(dat);
-      vid = document.getElementById('video'+dat);
-    vid.addEventListener("timeupdate",seektimeupdate,false);
-    seekbar = document.getElementById("seekbar"+dat);
-      seekbar.addEventListener("input",vidSeek,true);
-    volumeslider = document.getElementById("volumeslider"+dat);
-    volumeslider.addEventListener("change",setvolume,false);
-    // fullscreenbtn = document.getElementById("fullscreenbtn");
-    // fullscreenbtn.addEventListener("click",toggleFullScreen,false);
-    }
-      // window.onload = intializePlayer(1);
-      // console.log(intializePlayer);
-  function vidSeek(){
-    var seekto = vid.duration * (seekbar.value / 100);
-    vid.currentTime = seekto;
-  }
-  function seektimeupdate(){
-    var nt = vid.currentTime * (100 / vid.duration);
-    seekbar.value = nt ;
-  }
-  function setvolume(){
-    vid.volume = volumeslider.value / 100;
-  }
-  var play = document.getElementById('play');
-  function tooglePlayPause(elem){
-    // alert(elem);
-    window.onload = intializePlayer(elem);
-    var video = document.querySelector('.video'+elem);
-    var bar = document.querySelector('.bar'+elem);
+$(document).ready(function(){
+  $('.tablecontent1').show();
+  $('.tablecontent2').hide();
+  $('.tablecontent3').hide();
+  $('.tablecontent4').hide();
+});
 
+function changeContent(val){
+  // changeContent: Updates the displayed image, description and title based on the selected foraminifera (val)
+  var $desc = $('.desc'+val);
+  var descInner = $desc.html();
+  var title = $desc.data('title') || 'Foraminifera'; // Default to Foraminifera if no title specified
 
-    if(video.paused){
-      video.play();
-      $('#pause'+elem).show();
-      $('#video'+elem).show();
-      $('#play'+elem).hide();
-      $('.bigplay'+elem).hide();
-    }else{
-      video.pause();
-      $('.fullscreen'+elem).hide(); 
-      $('#pause'+elem).hide();
-      $('#play'+elem).show();
+  // Try multiple image extensions (webp, png, jpg, jpeg, gif) and use the first that loads.
+  var basePath = 'assets/img/real/' + val + 'real';
+  var exts = ['.webp', '.png', '.jpg', '.jpeg', '.gif'];
+
+  function tryLoad(index) {
+    if (index >= exts.length) {
+      // none found — fall back to a placeholder or the generic image
+      $("#imgreal").attr('src', 'assets/img/foraminifera.jpg');
+      return;
     }
-    video.addEventListener('timeupdate', function(){
-    var barPos = video.currentTime / video.duration;
-    bar.style.width = barPos * 91 + "%";
-    if (video.ended) {
-      $('#video'+elem).hide();
-      $('.fullscreen'+elem).hide();
-      $('.bigplay'+elem).show();
-    }
-    })
+    var url = basePath + exts[index];
+    var img = new Image();
+    var timedOut = false;
+    var timer = setTimeout(function(){
+      timedOut = true;
+      img.src = ''; // cancel
+      tryLoad(index + 1);
+    }, 1200); // 1.2s timeout per attempt
+
+    img.onload = function(){
+      if (timedOut) return;
+      clearTimeout(timer);
+      $("#imgreal").attr('src', url);
+    };
+    img.onerror = function(){
+      if (timedOut) return;
+      clearTimeout(timer);
+      tryLoad(index + 1);
+    };
+    // start attempt
+    img.src = url;
   }
+
+  tryLoad(0);
+
+  $("#showDesc").html(descInner);
+  $("#titleText").text(title);
+}
+
+function tabActive(id){
+  // tabActive: Switches the active tab and updates the displayed table content accordingly
+  var lia = $('#active_tab').val();
+  $('.tabtbl'+lia).removeClass('tabactive');
+  $('.tablecontent'+lia).fadeOut('slow');
+  $('#active_tab').val(id)
+  $('.tabtbl'+id).addClass('tabactive');
+  $('.tablecontent'+id).fadeIn(1000);
+}
 </script>
