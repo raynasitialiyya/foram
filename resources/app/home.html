@@ -6,7 +6,7 @@
         <input type="hidden" id="active_tab" value="1" />
         <img src="assets/img/foratitle.png" style="position: absolute;left: 600px;top:-50px">
         <img src="assets/img/contentbg.png" style="width: 125%; height: 100%; object-fit: cover; display: block; margin: 0; padding: 0;">
-        <img src="assets/img/bgtbl.png" style="position: absolute;top: 150px;width: 35%;left: 82px;z-index: 9998">
+        <!--<img src="assets/img/bgtblclean.png" style="position: absolute;top: 150px;width: 35%;left: 82px;z-index: 9998">-->
         <div onclick="tabActive(1)" class="tabtbl1 tabactive">
           <span style="letter-spacing: 10px;color: #FFF;font-size: 20px;position: relative;left: 9px">Kotak 1</span>
         </div>
@@ -18,39 +18,126 @@
         </div>
 
 
+        <style>
+            .tablecontent1 {
+                border-collapse: collapse !important;
+                border: 1px solid rgba(255, 194, 115, 0.8);
+                background: url('assets/img/bgtblclean.png') no-repeat;
+                background-size: cover;
+            }
+            .tablecontent1 th, .tablecontent1 td {
+                border: 1px solid rgba(255, 194, 115, 0.8);
+                padding: 15px;
+                transition: all 0.3s ease;
+            }
+            .tablecontent1 th {
+                border-bottom: 2px solid rgba(255, 194, 115, 0.8);
+                color: white;
+            }
+            .tablecontent1 td[onclick] {
+                cursor: pointer;
+            }
+            .tablecontent1 td[onclick]:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            }
+            .tablecontent1 td[onclick]:hover img {
+                opacity: 0.9;
+                transform: scale(1.1);
+                transition: all 0.3s ease;
+            }
+            .tablecontent1 tr:hover {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        </style>
         <!-- TABEL 1 -->
-        <table class="tablecontent1" style="position: absolute;top: 200px;width: 45%;left: 132px;z-index: 9999">
+        <table class="tablecontent1" style="position: absolute;top: 200px;left: 132px;z-index: 9999;">
           <tr>
-            <td width="10" onclick="changeContent('A1')"><img src="assets/img/table/A1.webp" width="30" style="margin-bottom: 17px;" />
+            <th width="75"></th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">1</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">2</th>
+          </tr>   
+          <tr>
+            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">A</td>
+            <td onclick="changeContent('A1')"><img src="assets/img/table/A1.png" width="150" />
               <div class="descA1" style="display: none;" data-title="Discocyclina sp.">
-                <p>Test large, microspheric test up to 23 mm in diameter, discoidal to lenticular, thin or centrally inflated, megalospheric embryo with small subglobular protoconch embraced by larger reniform deuteroconch, first nepionic cycle of chambers may be larger than the subsequent ones, radial partitions in equatorial chambers form concentric annuli of rectangular chamberlets, those of successive cycles alternating in position, adjacent chamberlets of an annulus connected by annular stolons at the proximal end of the radial walls, those of successive annuli connected by two or three radial stolons at different levels, about fifteen tiers of prominent lateral chambers comprise most of the test thickness, vertical stolons connect chamberlets of the equatorial layer with the lateral chambers, well-developed pillars end in surface papillae; wall calcareous, with dark median lines representing interseptal spaces or fissures but not true canals, surface granulate. M. Paleocene to U. Eocene; cosmopolitan, tropical and temperate. (Loeblich & Tappan, 1987, Foraminiferal Genera and Their Classification)</p>
+                <h5>Karakteristik</h5>
+                 <p>Test large, circular in plan, centrally umbo nate and narrowed at the periphery, micro spheric test up to nearly 6 cm in diameter, megalospheric test up to 14 mm across, young microspheric form planispiral and evolute, megalospheric one with globular proloculus and reniform deuteroloculus followed by a few undivided nepionic chambers, then plani spiral and peneropliform and finally with annu lar chambers subdivided into numerous chamberlets, those of successive cydic cham bers not aligned, chamberlets of microspheric and postnepionic megalospheric chambers formed by radial folds of the septal flap, the resultant double-walled secondary septa enclos ing intraseptal canals in the interlocular space, X-or Y-shaped stolons lie in the median plane where the fold of the septal flap touches the inner apertural wall, a thin horizontallamella in the median plane separates the stolons and results in a double foraminal aperture on the distal side of the septum, many vertically super imposed stolons also may occur around large megalospheric embryos, sutural canals sim ple and vertical as in Heterostegina, marginal cord present in the early spiral part of the test but disappears with the first annular chamber, canal system modified in the annular cham bers to conform to the circular septa, sutural canals simple and unbranched; wall calcareous, hyaline, finely perforate, surface ornamented with raised annuli or may have concentric rings of pustules. L. Oligocene to Holocene; tropical Indo-Pacific.</p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A2')"><img src="assets/img/table/A2.jpg" width="30" style="margin-bottom: 17px;" />
+            <td onclick="changeContent('A2')"><img src="assets/img/table/A2.jpg" width="150"/>
               <div class="descA2" style="display: none;" data-title="Cycloclypeus sp.">
-                 <p>Oligosen/Oligocene<br>Gua Pawon, Padalarang, Jawa Barat</br><br>Ket: Dalam Batugamping</br></p>
-              </div>
-            </td>
-            <td width="10" onclick="changeContent('A3')"><img src="assets/img/table/A3.png" width="30" style="margin-bottom: 17px;" />
-              <div class="descA3" style="display: none;" data-title="Assilina spira de Roissy">
-                <p>Eosen/Eocene<br>Assilina spira de Roissy</br></p>
-              </div>
+                 <p>Oligosen/Oligocene<br>Gua Pawon, Padalarang, Jawa Barat<br>Ket: Dalam Batugamping</p>
+                <h5>Karakteristik</h5>
+                 <p>Test large, circular in plan, centrally umbo nate and narrowed at the periphery, micro spheric test up to nearly 6 cm in diameter, megalospheric test up to 14 mm across, young microspheric form planispiral and evolute, megalospheric one with globular proloculus and reniform deuteroloculus followed by a few undivided nepionic chambers, then plani spiral and peneropliform and finally with annu lar chambers subdivided into numerous chamberlets, those of successive cydic cham bers not aligned, chamberlets of microspheric and postnepionic megalospheric chambers formed by radial folds of the septal flap, the resultant double-walled secondary septa enclos ing intraseptal canals in the interlocular space, X-or Y-shaped stolons lie in the median plane where the fold of the septal flap touches the inner apertural wall, a thin horizontallamella in the median plane separates the stolons and results in a double foraminal aperture on the distal side of the septum, many vertically super imposed stolons also may occur around large megalospheric embryos, sutural canals sim ple and vertical as in Heterostegina, marginal cord present in the early spiral part of the test but disappears with the first annular chamber, canal system modified in the annular cham bers to conform to the circular septa, sutural canals simple and unbranched; wall calcareous, hyaline, finely perforate, surface ornamented with raised annuli or may have concentric rings of pustules. L. Oligocene to Holocene; tropical Indo-Pacific.</p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
+                </div>
             </td>
             </tr>
-             <tr>
-            <td width="10" onclick="changeContent('A4')"><img src="assets/img/table/A4.png" width="30" style="margin-bottom: 17px;" />
+
+            <tr>
+            <td style="font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">B</td>
+            <td onclick="changeContent('A3')"><img src="assets/img/table/A3.jpg" width="150" />
+              <div class="descA3" style="display: none;" data-title="Assilina spira de Roissy">
+                <p>Eosen/Eocene<br>Assilina spira de Roissy</p>
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
+              </div>
+            </td>    
+            <td onclick="changeContent('A4')"><img src="assets/img/table/A4.jpg" width="150" />
               <div class="descA4" style="display: none;" data-title="Nummulites sp.">
-                 <p>a4</p>
+                 <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A5')"><img src="assets/img/table/A5.png" width="30" style="margin-bottom: 17px;" />
+            
+            <tr>
+            <td style="font-weight: bold; text-align: center;color: white; font-size:xx-large;" width="50">C</td>
+            <td onclick="changeContent('A5')"><img src="assets/img/table/A5.jpg" width="150" />
               <div class="descA5" style="display: none;" data-title="Aleveolina elliptica">
-                <p>a5</p>
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('A6')"><img src="assets/img/table/A6.png" width="30" style="margin-bottom: 17px;" />
+            <td onclick="changeContent('A6')"><img src="assets/img/table/A6.jpeg" width="150" />
               <div class="descA6" style="display: none;" data-title="Discocyclina sp.">
-                <p>a6</p>
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
           </tr>
@@ -60,14 +147,28 @@
         </table>
         <table class="tablecontent2" style="position: absolute;top: 200px; width: 45%; z-index: 9999; left: 102px;">
           <tr>
-            <td width="10" onclick="changeContent('B1')" style="padding-left: 140px;"><img src="assets/img/table/B1.png" width="30" style="margin-bottom: 17px;"  />
+            <td width="10" onclick="changeContent('B1')" style="padding-left: 140px;"><img src="assets/img/table/B1.jpeg" width="30" style="margin-bottom: 17px;"  />
               <div class="descB1" style="display: none;" data-title="Discocyclina sp.">
-                <p>B1</p>
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
             <td width="10" onclick="changeContent('B2')" style="padding-left: 140px;"><img src="assets/img/table/B2.png" width="30" style="margin-bottom: 17px;" />
               <div class="descB2" style="display: none;" data-title="Nummulites sp.">
-                 <p>B2</p>
+                 <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
             </tr>
@@ -75,17 +176,38 @@
             <tr>
             <td width="10" onclick="changeContent('B3')"><img src="assets/img/table/B3.png" width="30" style="margin-bottom: 17px;" />
               <div class="descB3" style="display: none;" data-title="Frabellum avicula Muchelin"> 
-                <p>B3</p>
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
             <td width="10" onclick="changeContent('B4')"><img src="assets/img/table/B4.png" width="30" style="margin-bottom: 17px;" />
               <div class="descB4" style="display: none;" data-title="Discocyclina javana Verbeeki">
-                 <p>B4</p>
+                 <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B5')"><img src="assets/img/table/B5.png" width="30" style="margin-bottom: 17px; left: 132px;" />
+            <td width="10" onclick="changeContent('B5')"><img src="assets/img/table/B5.jpg" width="30" style="margin-bottom: 17px; left: 132px;" />
               <div class="descB5" style="display: none;" data-title="Heterostigma V.d Vlerk">
-                <p>B5</p>
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
           </tr>
@@ -93,29 +215,64 @@
           <tr>
             <td width="10" onclick="changeContent('B6')"><img src="assets/img/table/B6.png" width="30" style="margin-bottom: 17px;" />
               <div class="descB6" style="display: none;" data-title="Heterostegina assilinoides">
-                 <p>B6</p>
+                 <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B7')"><img src="assets/img/table/B7.png" width="30" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('B7')"><img src="assets/img/table/B7" width="30" style="margin-bottom: 17px;" />
               <div class="descB7" style="display: none;" data-title="Ricordei toxaste">
-                <p>B7</p>
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B8')"><img src="assets/img/table/B8.png" width="30" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('B8')"><img src="assets/img/table/B8.jpg" width="30" style="margin-bottom: 17px;" />
              <div class="descB8" style="display: none;" data-title="Lepidocyclina sp.">
-                 <p>B8</p>
+                 <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div></td>
             </tr>
 
             <tr>
-            <td width="10" onclick="changeContent('B9')" style="padding-left: 140px;"><img src="assets/img/table/B9.png" width="30" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('B9')" style="padding-left: 140px;"><img src="assets/img/table/B9.jpg" width="30" style="margin-bottom: 17px;" />
               <div class="descB9" style="display: none;" data-title="Miogypsina lamp">
-                <p>B9</p>
+                <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B10')" style="padding-left: 140px;"><img src="assets/img/table/B10.png" width="30" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('B10')" style="padding-left: 140px;"><img src="assets/img/table/B10.jpg" width="30" style="margin-bottom: 17px;" />
               <div class="descB10" style="display: none;" data-title="Spiroclypeus sp.">
-                 <p>B10</p>
+                 <h5>Karakteristik</h5>
+                 <p></p>
+                 <h5>Habitat</h5>
+                 <p></p>
+                 <h5>Persebaran/Catatan Temuan</h5>
+                 <p></p>
+                 <hr>
+                 <p></p>
               </div>
             </td>
           </tr>
