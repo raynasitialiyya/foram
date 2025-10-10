@@ -20,12 +20,29 @@
 
 
         <style>
-          
+            /* CSS Variable for tablecontent3 cell widths */
+            :root {
+                --tc3-cell-width: 35px; /* Change this value to update all tablecontent3 cell widths */
+            }
+            
+            /* Shared width for tablecontent3 cells */
+            .tablecontent3 td {
+                width: var(--tc3-cell-width);
+            }
+            /* Custom widths can override the shared width */
+            .tablecontent3 td.custom-width {
+                width: auto;
+            }
+            
             .tablecontent1, .tablecontent2, .tablecontent3 {
                 border-collapse: collapse !important;
                 border: 3px solid rgba(253, 253, 253, 0.8);
-                background: url('assets/img/bg.png') no-repeat;
+                background: url('assets/img/bgblack.png') no-repeat;
                 background-size: cover;
+                position: absolute;
+                left: 180px;
+                top: 200px;
+                z-index: 9999;
             }
             .tablecontent1 th, .tablecontent1 td,
             .tablecontent2 th, .tablecontent2 td,
@@ -53,16 +70,21 @@
             .tablecontent1 tr:hover, .tablecontent2 tr:hover, .tablecontent3 tr:hover {
                 background-color: rgba(255, 255, 255, 0.05);
             }
+            .tdwidth {
+                width: 45%;
+            }
         </style>
+
+
         <!-- TABEL 1 -->
-        <table class="tablecontent1" style="position: absolute;top: 200px;left: 132px;z-index: 9999;">
+        <table class="tablecontent1">
           <tr>
             <th width="75"></th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">1</th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">2</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">1</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">2</th>
           </tr>   
           <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">A</td>
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;" width="50">A</td>
             <td onclick="changeContent('A1')"><img src="assets/img/table/A1.png" width="150" />
               <div class="descA1" style="display: none;" data-title="Discocyclina sp.">
                 <h5>Karakteristik</h5>
@@ -91,7 +113,7 @@
             </tr>
 
             <tr>
-            <td style="font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">B</td>
+            <td style="font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">B</td>
             <td onclick="changeContent('A3')"><img src="assets/img/table/A3.png" width="150" />
               <div class="descA3" style="display: none;" data-title="Assilina spira de Roissy">
                 <p>Eosen/Eocene<br>Assilina spira de Roissy</p>
@@ -119,7 +141,7 @@
             </td>
             
             <tr>
-            <td style="font-weight: bold; text-align: center;color: white; font-size:xx-large;" width="50">C</td>
+            <td style="font-weight: bold; text-align: center;color: white; font-size:large;" width="50">C</td>
             <td onclick="changeContent('A5')"><img src="assets/img/table/A5.png" width="150" />
               <div class="descA5" style="display: none;" data-title="Aleveolina elliptica">
                 <h5>Karakteristik</h5>
@@ -149,16 +171,16 @@
 
         <!-- TABEL 2 -->
         </table>
-        <table class="tablecontent2" style="position: absolute;top: 200px; width: 45%; z-index: 9999; left: 102px;">
+        <table class="tablecontent2">
           <tr>
             <th width="75"></th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">1</th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">2</th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">3</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">1</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">2</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">3</th>
           </tr>  
           <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">A</td>
-            <td width="10" onclick="changeContent('B1')" style="padding-left: 140px;"><img src="assets/img/table/B1.png" width="50" style="margin-bottom: 17px;"  />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;" width="50">A</td>
+            <td width="10" onclick="changeContent('B1')"><img src="assets/img/table/B1.png" width="80" style="margin-bottom: 17px;"  />
               <div class="descB1" style="display: none;" data-title="Discocyclina sp.">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -170,7 +192,7 @@
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B2')" style="padding-left: 140px;"><img src="assets/img/table/B2.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('B2')"><img src="assets/img/table/B2.png" width="80" style="margin-bottom: 17px;" />
               <div class="descB2" style="display: none;" data-title="Nummulites sp.">
                  <h5>Karakteristik</h5>
                  <p></p>
@@ -182,11 +204,11 @@
                  <p></p>
               </div>
             </td>
-            </tr>
+          </tr>
 
           <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">B</td>
-            <td width="10" onclick="changeContent('B3')"><img src="assets/img/table/B3.png" width="50" style="margin-bottom: 17px;" />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;" width="50">B</td>
+            <td width="10" onclick="changeContent('B3')"><img src="assets/img/table/B3.png" width="80" style="margin-bottom: 17px;" />
               <div class="descB3" style="display: none;" data-title="Frabellum avicula Muchelin"> 
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -198,7 +220,7 @@
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B4')"><img src="assets/img/table/B4.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('B4')"><img src="assets/img/table/B4.png" width="80" style="margin-bottom: 17px;" />
               <div class="descB4" style="display: none;" data-title="Discocyclina javana Verbeeki">
                  <h5>Karakteristik</h5>
                  <p></p>
@@ -210,7 +232,7 @@
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B5')"><img src="assets/img/table/B5.png" width="50" style="margin-bottom: 17px; left: 132px;" />
+            <td width="10" onclick="changeContent('B5')"><img src="assets/img/table/B5.png" width="80" style="margin-bottom: 17px; left: 132px;" />
               <div class="descB5" style="display: none;" data-title="Heterostigma V.d Vlerk">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -222,11 +244,12 @@
                  <p></p>
               </div>
             </td>
+            
           </tr>
-          
+
           <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">C</td>
-            <td width="10" onclick="changeContent('B6')"><img src="assets/img/table/B6.png" width="50" style="margin-bottom: 17px;" />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;" width="50">C</td>
+            <td width="10" onclick="changeContent('B6')"><img src="assets/img/table/B6.png" width="80" style="margin-bottom: 17px;" />
               <div class="descB6" style="display: none;" data-title="Heterostegina assilinoides">
                  <h5>Karakteristik</h5>
                  <p></p>
@@ -238,7 +261,7 @@
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B7')"><img src="assets/img/table/B7.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('B7')"><img src="assets/img/table/B7.png" width="80" style="margin-bottom: 17px;" />
               <div class="descB7" style="display: none;" data-title="Ricordei toxaste">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -250,7 +273,7 @@
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B8')"><img src="assets/img/table/B8.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('B8')"><img src="assets/img/table/B8.png" width="80" style="margin-bottom: 17px;" />
              <div class="descB8" style="display: none;" data-title="Lepidocyclina sp.">
                  <h5>Karakteristik</h5>
                  <p></p>
@@ -261,11 +284,11 @@
                  <hr>
                  <p></p>
               </div></td>
-            </tr>
+          </tr>
 
           <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">D</td>
-            <td width="10" onclick="changeContent('B9')" style="padding-left: 140px;"><img src="assets/img/table/B9.png" width="50" style="margin-bottom: 17px;" />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;" width="50">D</td>
+            <td width="10" onclick="changeContent('B9')"><img src="assets/img/table/B9.png" width="80" style="margin-bottom: 17px;" />
               <div class="descB9" style="display: none;" data-title="Miogypsina lamp">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -277,7 +300,7 @@
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('B10')" style="padding-left: 140px;"><img src="assets/img/table/B10.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('B10')"><img src="assets/img/table/B10.png" width="80" style="margin-bottom: 17px;" />
               <div class="descB10" style="display: none;" data-title="Spiroclypeus sp.">
                  <h5>Karakteristik</h5>
                  <p></p>
@@ -290,26 +313,25 @@
               </div>
             </td>
           </tr>
-
-
-
         </table>
 
 
         <!-- TABEL 3 -->
-        <table class="tablecontent3" style="position: absolute;top: 200px;width: 45%;left: 132px;z-index: 9999">
+        <table class="tablecontent3">
           <tr>
             <th width="75"></th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">1</th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">2</th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">3</th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">4</th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">5</th>
-            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:xx-large;" width="50">6</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" >1</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">2</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">3</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">4</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">5</th>
+            <th style="text-align: center; font-weight: bold; text-align: center;color: rgb(255, 255, 255); font-size:large;" width="50">6</th>
           </tr>
+
+          <!-- FORAM BENTONIK -->
           <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">A</td>
-            <td width="10" onclick="changeContent('C1')"><img src="assets/img/table/C1.png" width="50" style="margin-bottom: 17px;" />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;">A</td>
+            <td width="10" onclick="changeContent('C1')"><img src="assets/img/table/C1.png" width="40" style="margin-bottom: 17px;" />
               <div class="descC1" style="display: none;" data-title="Spiroloculina">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -321,7 +343,7 @@
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('C2')"><img src="assets/img/table/C2.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('C2')"><img src="assets/img/table/C2.png" width="40" style="margin-bottom: 17px;" />
               <div class="descC2" style="display: none;" data-title="Ammobaculites">
                 <h5>Karakteristik</h5>
                 <p>Cangkang membentuk spiral datar (planispiral) yang kemudian berkembang menjadi deretan uniserial besar, memanjang, lurus atau melengkung, biasanya terdiri dari tiga atau lebih ruang (chamber). Terdapat sebuah umbilikus kecil dan cekung yang tampak di pusat spiral datar. Ruang-ruangnya agak menggembung dan dipisahkan oleh sutures yang sedikit cekung. Dinding cangkang tidak berongga dan tersusun secara kasar dari partikel yang direkatkan dengan non-calcareous cement. Apertur utama berbentuk bulat dan terletak di ujung cangkang. </p>
@@ -337,7 +359,7 @@ Cushman (1920) melaporkan temuan dari 30 stasiun ekspedisi “Albatross” di At
                 <p>​​(Holbourn et al., 2013)​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('C3')"><img src="assets/img/table/C3.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('C3')"><img src="assets/img/table/C3.png" width="40" style="margin-bottom: 17px;" />
               <div class="descC3" style="display: none;" data-title="Spiroloculina">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -349,7 +371,7 @@ Cushman (1920) melaporkan temuan dari 30 stasiun ekspedisi “Albatross” di At
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('C4')"><img src="assets/img/table/C4.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('C4')"><img src="assets/img/table/C4.png" width="40" style="margin-bottom: 17px;" />
               <div class="descC4" style="display: none;" data-title="Vulvulina">
                  <h5>Karakteristik</h5>
                  <p>Cangkang tipe free test atau tidak melekat pada substrat, hidup bebas di dasar laut atau melayang di kolom air. Penampang cangkang melebar atau memanjang, berbentuk seperti  belah ketupat (lozenge-shaped) atau romboid dalam penampang, tepi tajam dan berangulasi. 
@@ -366,7 +388,7 @@ Apertur berupa lengkung rendah di bagian dalam tepi (interiomarginal arch) pada 
                  <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('C5')"><img src="assets/img/table/C5.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('C5')"><img src="assets/img/table/C5.png" width="40" style="margin-bottom: 17px;" />
               <div class="descC5" style="display: none;" data-title="Triloculina">
                 <h5>Karakteristik</h5>
                  <p>Cangkang memiliki chambers awal bertipe quinqueloculine, setidaknya pada bentuk mikrosferik. Tahap selanjutnya berbentuk pseudoiriloculine atau triloculine. Berbentuk oval dari tampak atas dan tampak segitiga sama sisi atau agak segitiga secara penampang. Chambers berikutnya berada dalam bidang yang saling berjarak 120°, masing-masing dalam bidang yang sama dengan chamber ketiga dan menutupinya sehingga bagian luar cangkang hanya terdiri dari tiga chamber yang tampak dan tiap chamber tidak memuliki dasar. Ruang-ruangnya tidak bersifat labyrinthic. Dinding cangkang tersusun dari kalsit bertekstur porcellanous, tanpa pori dan terkadang memiliki lapisan luar berbutir pasir (arenaceous). Apertur berbentuk bulat pada ujung final chamber, biasanya dilengkapi dengan struktur tooth-like pendek bercabang dua (short bifid tooth).</p>
@@ -378,7 +400,7 @@ Apertur berupa lengkung rendah di bagian dalam tepi (interiomarginal arch) pada 
                  <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('C6')"><img src="assets/img/table/C6.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('C6')"><img src="assets/img/table/C6.png" width="40" style="margin-bottom: 17px;" />
               <div class="descC6" style="display: none;" data-title="Planorbulina">
                  <h5>Karakteristik</h5>
                  <p>Cangkang pada tahap awal berupa trochospiral coil rendah dengan arah coil acak, melekat pada substrat melalui sisi spiral. Proloculus mikrosferik berdiameter 11–14 μm, sedangkan proloculus megalosferik berdiameter 23–56 μm. Chambers paling awal berbentuk sedikit trochoid, berpilin rapat, berkembang menjadi deret tidak beraturan dalam satu lapisan di sekitar periphery. Chambers selanjutnya memiliki dua apertur dan masing-masing menghasilkan chambers biapertural baru sehingga terbentuk banyak spiral dan akhirnya terbentuk whorl dari chamber. Sutura jelas, dapat menebal dan menonjol pada sisi yang melekat, tetapi umumnya cekung pada sisi yang bebas. Periphery membulat hingga agak bersudut. 
@@ -395,8 +417,8 @@ Dinding pada chambers bersifat kitin (chitinous), lalu menjadi kalsit (calcareou
             </tr>
 
           <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">B</td>
-            <td width="10" onclick="changeContent('C7')"><img src="assets/img/table/C7.png" width="50" style="margin-bottom: 17px;" />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;" width="40">B</td>
+            <td width="10" onclick="changeContent('C7')"><img src="assets/img/table/C7.png" width="40" style="margin-bottom: 17px;" />
               <div class="descC7" style="display: none;" data-title="Alveolinella quoyi">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -408,7 +430,7 @@ Dinding pada chambers bersifat kitin (chitinous), lalu menjadi kalsit (calcareou
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('C8')"><img src="assets/img/table/C8.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('C8')"><img src="assets/img/table/C8.png" width="40" style="margin-bottom: 17px;" />
              <div class="descC8" style="display: none;" data-title="Virgulina mexicana">
                  <h5>Karakteristik</h5>
                  <p></p>
@@ -419,7 +441,7 @@ Dinding pada chambers bersifat kitin (chitinous), lalu menjadi kalsit (calcareou
                  <hr>
                  <p></p>
               </div></td>
-            <td width="10" onclick="changeContent('C9')"><img src="assets/img/table/C9.png" width="50" style="margin-bottom: 20px;" />
+            <td width="10" onclick="changeContent('C9')"><img src="assets/img/table/C9.png" width="40" style="margin-bottom: 20px;" />
               <div class="descC9" style="display: none;" data-title="Clavulina">
                 <h5>Karakteristik</h5>
                  <p>Cangkang memanjang, tersusun triserial, penampang melintang berbentuk segitiga. Chambers sederhana, pada bagian selanjutnya berkembang menjadi uniserial dan rectilinear setelah tahap triserial. Dinding bersifat arenaceous hingga agglutinated, permukaannya dapat sangat kasar hingga relatif halus. Pada beberapa spesies, penambahan chamber baru mengjasilkan penambahan floor imperforate (tidak berpori) sehingga sekat (septa) menjadi berlapis ganda secara sekunder.  
@@ -433,7 +455,7 @@ Apertur pada tahap triserial awal bersifat interiomarginal. Pada individu dewasa
                  <p>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('C10')"><img src="assets/img/table/C10.png" width="50" style="margin-bottom: 20px;" />
+            <td width="10" onclick="changeContent('C10')"><img src="assets/img/table/C10.png" width="40" style="margin-bottom: 20px;" />
               <div class="descC10" style="display: none;" data-title="Uvigerina">
                  <h5>Karakteristik</h5>
                  <p>Cangkang umumnya tersusun secara triseral (tiga baris), berbentuk memanjang dan fusiform (gelendong) dengan penampang melintang yang membulat. Chambers awal saling menempel rapat, sedangkan chambers berikutnya tampak menggembung, berbentuk bulat, relatif lebih tinggi dan tersusun lebih longgat dalam pola triseral. Dinding tersusun dari kalsium bikarbonat (calcareous) dan perforate (berpori) dengan permukaan yang dihiasi oleh costae  atau striae longitudinal berbentuk pipih.  Apertur terminal, berbentuk bulat dan biasanya menonjol pada sebuah leher. Bagian tepi apertur dibatasi oleh phialine lip dan secara internal dilengkapi dengan toothplate hemisilindris yang dapat memiliki tonjolan mirip sayap pada salah satu sisi, serta berfungsi sebagai penghubung apertur dengan foramen sebelumnya. Pada beberapa spesies, apertura ini juga menunjukkan keunikan berupa spiral tooth (gigi spiral) dan saluran dalam yang berpilin (twisted canal), memberikan variasi tambahan dalam struktur apertural.</p>
@@ -445,7 +467,7 @@ Apertur pada tahap triserial awal bersifat interiomarginal. Pada individu dewasa
                  <p>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('C11')"><img src="assets/img/table/C11.png" width="50" style="margin-bottom: 20px;" />
+            <td width="10" onclick="changeContent('C11')"><img src="assets/img/table/C11.png" width="40" style="margin-bottom: 20px;" />
               <div class="descC11" style="display: none;" data-title="Quinqueloculina parkeri">
                 <h5>Karakteristik</h5>
                  <p>Cangkang berbentuk oval dalam tampilan luar. Chambers awal tersusun quinqueloculine, baik pada generasi mikrosferik maupun megalosferik, atau dapat berupa cryptoquinqueloculine tergantung pada derajat tumpang tindih antar chamber berturut-turut. Cangkang memiliki pola coil dalam lima chambers, setiap chamber memiliki panjang one-half coil. Setiap chamber berjarak 72° dari chamber berikutnya, tetapi 144° dari chamber sebelumnya secara langsung. Lima chambers menyelesaikan satu siklus yang berupa dua coil mengelilingi sumbu secara penampang, namun secara longitudinal membentuk two-half coil.  Umumnya terdapat lima chambers yang tampak dari luar, empat chambers terlihat dari satu sisi, dan tiga chamber dari sisi sebaliknya. Chambers memiliki dasar (floor) setidaknya pada tahap dewasa. Dinding bersifat kalsit (calcarous), tidak berpori (imperforate), dan porcelaneous. Apertur di ujung chamber, berbentuk oval, rata dengan permukaan, dilangkapi dengan bifid tooth (gigi bercabang dua).</p>
@@ -460,7 +482,7 @@ Spesies dari genus Quinqueloculina dan taksa terkait telah menjajah seluruh ling
                  <p>Baccaert, 1987<br>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('C12')"><img src="assets/img/table/C12.png" width="50" style="margin-bottom: 20px;" />
+            <td width="10" onclick="changeContent('C12')"><img src="assets/img/table/C12.png" width="40" style="margin-bottom: 20px;" />
             <div class="descC12" style="display: none;" data-title="Bulimina">
                  <h5>Karakteristik</h5>
                  <p></p>
@@ -474,8 +496,8 @@ Spesies dari genus Quinqueloculina dan taksa terkait telah menjajah seluruh ling
             </tr>
             
           <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">C</td>
-            <td width="10" onclick="changeContent('C13')"><img src="assets/img/table/C13.png" width="50" style="margin-bottom: 20px;" />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;" width="40">C</td>
+            <td width="10" onclick="changeContent('C13')"><img src="assets/img/table/C13.png" width="40" style="margin-bottom: 20px;" />
              <div class="descC13" style="display: none;" data-title="Pyrgo">
                 <h5>Karakteristik</h5>
                  <p>Cangkang berbentuk oval pada tampak luar, terkompresi pada bagian tengah antara dua chamber yang berlawanan dengan periphery (tepi tubuh) bersudut hingga membentuk carina. Chambers berbentuk half coil, pada bentuk mikrosferik memiliki susunan awal quinqueloculine hingga cryptoquinqueloculine, diikuti oleh deretan triloculine. Pada tahap dewasa berbentuk biloculine. Dua chamber membentuk eksterior dan interiornya sederhana. Dinding bersifat kalsit (calcareous), tidak berpori (imperforate), dan porcelaneous. Aperture pada ujung final chamber, berbentuk oval, dengan bifid tooth (gigi becabang dua) yang lebar.</p>
@@ -489,7 +511,7 @@ P. lucernula pada zona bathyal tengah hingga abisal. Dilaporkan berada pada keda
                  <p>Jones, 1994.<br>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988
 </p>
                 </div></td>
-            <td width="10" onclick="changeContent('C14')"><img src="assets/img/table/C14.png" width="50" style="margin-bottom: 20px;" />
+            <td width="10" onclick="changeContent('C14')"><img src="assets/img/table/C14.png" width="40" style="margin-bottom: 20px;" />
               <div class="descC14" style="display: none;" data-title="Guttulina">
                  <h5>Karakteristik</h5>
                  <p>Cangkang berbentuk oval hingga memanjang dengan chambers yang menggembung, tersusun pada bidang yang berjarak 144° satu sama lain, membentuk susunan quinqueloculine, dimana setiap chamber baru yang terbentuk tersusun semakin menjauh dari bagian basal cangkang, memanjang ke arah distal, serta menutupi ruang sebelumnya secara proksimal. Sutura tampak jelas dan cekung. Dinding bersifat berkapur (calcareous), transparan atau bening (hyaline), tersusun secara radial, dengan permukaan yang halus. Apertur terminal berbentuk radial. </p>
@@ -502,9 +524,11 @@ P. lucernula pada zona bathyal tengah hingga abisal. Dilaporkan berada pada keda
                  </div></td>        
           </tr>
 
+
+          <!-- FORAM PLANKTONIK -->
           <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">A</td>
-            <td width="10" onclick="changeContent('D1')"><img src="assets/img/table/D1.png" width="50" style="margin-bottom: 17px;" />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;" width="40">D</td>
+            <td width="10" onclick="changeContent('D1')"><img src="assets/img/table/D1.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD1" style="display: none;" data-title="Eponides">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -516,7 +540,7 @@ P. lucernula pada zona bathyal tengah hingga abisal. Dilaporkan berada pada keda
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D2')"><img src="assets/img/table/D2.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D2')"><img src="assets/img/table/D2.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD2" style="display: none;" data-title="Elphidium">
                 <h5>Karakteristik</h5>
                 <p>Cangkang membentuk spiral datar (planispiral) yang kemudian berkembang menjadi deretan uniserial besar, memanjang, lurus atau melengkung, biasanya terdiri dari tiga atau lebih ruang (chamber). Terdapat sebuah umbilikus kecil dan cekung yang tampak di pusat spiral datar. Ruang-ruangnya agak menggembung dan dipisahkan oleh sutures yang sedikit cekung. Dinding cangkang tidak berongga dan tersusun secara kasar dari partikel yang direkatkan dengan non-calcareous cement. Apertur utama berbentuk bulat dan terletak di ujung cangkang. </p>
@@ -532,7 +556,7 @@ Cushman (1920) melaporkan temuan dari 30 stasiun ekspedisi “Albatross” di At
                 <p>​​(Holbourn et al., 2013)​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D3')"><img src="assets/img/table/D3.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D3')"><img src="assets/img/table/D3.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD3" style="display: none;" data-title="Lenticulina">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -544,7 +568,7 @@ Cushman (1920) melaporkan temuan dari 30 stasiun ekspedisi “Albatross” di At
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D4')"><img src="assets/img/table/D4.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D4')"><img src="assets/img/table/D4.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD4" style="display: none;" data-title="Amphistegina">
                  <h5>Karakteristik</h5>
                  <p>Cangkang tipe free test atau tidak melekat pada substrat, hidup bebas di dasar laut atau melayang di kolom air. Penampang cangkang melebar atau memanjang, berbentuk seperti  belah ketupat (lozenge-shaped) atau romboid dalam penampang, tepi tajam dan berangulasi. 
@@ -561,7 +585,7 @@ Apertur berupa lengkung rendah di bagian dalam tepi (interiomarginal arch) pada 
                  <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D5')"><img src="assets/img/table/D5.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D5')"><img src="assets/img/table/D5.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD5" style="display: none;" data-title="Eponides">
                 <h5>Karakteristik</h5>
                  <p>Cangkang memiliki chambers awal bertipe quinqueloculine, setidaknya pada bentuk mikrosferik. Tahap selanjutnya berbentuk pseudoiriloculine atau triloculine. Berbentuk oval dari tampak atas dan tampak segitiga sama sisi atau agak segitiga secara penampang. Chambers berikutnya berada dalam bidang yang saling berjarak 120°, masing-masing dalam bidang yang sama dengan chamber ketiga dan menutupinya sehingga bagian luar cangkang hanya terdiri dari tiga chamber yang tampak dan tiap chamber tidak memuliki dasar. Ruang-ruangnya tidak bersifat labyrinthic. Dinding cangkang tersusun dari kalsit bertekstur porcellanous, tanpa pori dan terkadang memiliki lapisan luar berbutir pasir (arenaceous). Apertur berbentuk bulat pada ujung final chamber, biasanya dilengkapi dengan struktur tooth-like pendek bercabang dua (short bifid tooth).</p>
@@ -573,7 +597,7 @@ Apertur berupa lengkung rendah di bagian dalam tepi (interiomarginal arch) pada 
                  <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D6')"><img src="assets/img/table/D6.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D6')"><img src="assets/img/table/D6.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD6" style="display: none;" data-title="Asterocyclina">
                  <h5>Karakteristik</h5>
                  <p>Cangkang pada tahap awal berupa trochospiral coil rendah dengan arah coil acak, melekat pada substrat melalui sisi spiral. Proloculus mikrosferik berdiameter 11–14 μm, sedangkan proloculus megalosferik berdiameter 23–56 μm. Chambers paling awal berbentuk sedikit trochoid, berpilin rapat, berkembang menjadi deret tidak beraturan dalam satu lapisan di sekitar periphery. Chambers selanjutnya memiliki dua apertur dan masing-masing menghasilkan chambers biapertural baru sehingga terbentuk banyak spiral dan akhirnya terbentuk whorl dari chamber. Sutura jelas, dapat menebal dan menonjol pada sisi yang melekat, tetapi umumnya cekung pada sisi yang bebas. Periphery membulat hingga agak bersudut. 
@@ -590,8 +614,8 @@ Dinding pada chambers bersifat kitin (chitinous), lalu menjadi kalsit (calcareou
             </tr>
 
             <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">A</td>
-            <td width="10" onclick="changeContent('D7')"><img src="assets/img/table/D7.png" width="50" style="margin-bottom: 17px;" />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large;" width="40">E</td>
+            <td width="10" onclick="changeContent('D7')"><img src="assets/img/table/D7.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD7" style="display: none;" data-title="Rotalia">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -603,7 +627,7 @@ Dinding pada chambers bersifat kitin (chitinous), lalu menjadi kalsit (calcareou
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D8')"><img src="assets/img/table/D8.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D8')"><img src="assets/img/table/D8.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD8" style="display: none;" data-title="Globorotalia">
                 <h5>Karakteristik</h5>
                 <p>Cangkang membentuk spiral datar (planispiral) yang kemudian berkembang menjadi deretan uniserial besar, memanjang, lurus atau melengkung, biasanya terdiri dari tiga atau lebih ruang (chamber). Terdapat sebuah umbilikus kecil dan cekung yang tampak di pusat spiral datar. Ruang-ruangnya agak menggembung dan dipisahkan oleh sutures yang sedikit cekung. Dinding cangkang tidak berongga dan tersusun secara kasar dari partikel yang direkatkan dengan non-calcareous cement. Apertur utama berbentuk bulat dan terletak di ujung cangkang. </p>
@@ -619,7 +643,7 @@ Cushman (1920) melaporkan temuan dari 30 stasiun ekspedisi “Albatross” di At
                 <p>​​(Holbourn et al., 2013)​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D9')"><img src="assets/img/table/D9.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D9')"><img src="assets/img/table/D9.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD9" style="display: none;" data-title="Anomalina">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -631,7 +655,7 @@ Cushman (1920) melaporkan temuan dari 30 stasiun ekspedisi “Albatross” di At
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D10')"><img src="assets/img/table/D10.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D10')"><img src="assets/img/table/D10.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD10" style="display: none;" data-title="Cassidulina">
                  <h5>Karakteristik</h5>
                  <p>Cangkang tipe free test atau tidak melekat pada substrat, hidup bebas di dasar laut atau melayang di kolom air. Penampang cangkang melebar atau memanjang, berbentuk seperti  belah ketupat (lozenge-shaped) atau romboid dalam penampang, tepi tajam dan berangulasi. 
@@ -648,7 +672,7 @@ Apertur berupa lengkung rendah di bagian dalam tepi (interiomarginal arch) pada 
                  <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D11')"><img src="assets/img/table/D11.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D11')"><img src="assets/img/table/D11.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD11" style="display: none;" data-title="Asterigerina">
                 <h5>Karakteristik</h5>
                  <p>Cangkang memiliki chambers awal bertipe quinqueloculine, setidaknya pada bentuk mikrosferik. Tahap selanjutnya berbentuk pseudoiriloculine atau triloculine. Berbentuk oval dari tampak atas dan tampak segitiga sama sisi atau agak segitiga secara penampang. Chambers berikutnya berada dalam bidang yang saling berjarak 120°, masing-masing dalam bidang yang sama dengan chamber ketiga dan menutupinya sehingga bagian luar cangkang hanya terdiri dari tiga chamber yang tampak dan tiap chamber tidak memuliki dasar. Ruang-ruangnya tidak bersifat labyrinthic. Dinding cangkang tersusun dari kalsit bertekstur porcellanous, tanpa pori dan terkadang memiliki lapisan luar berbutir pasir (arenaceous). Apertur berbentuk bulat pada ujung final chamber, biasanya dilengkapi dengan struktur tooth-like pendek bercabang dua (short bifid tooth).</p>
@@ -660,7 +684,7 @@ Apertur berupa lengkung rendah di bagian dalam tepi (interiomarginal arch) pada 
                  <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D12')"><img src="assets/img/table/D12.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D12')"><img src="assets/img/table/D12.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD12" style="display: none;" data-title="Nonion">
                  <h5>Karakteristik</h5>
                  <p>Cangkang pada tahap awal berupa trochospiral coil rendah dengan arah coil acak, melekat pada substrat melalui sisi spiral. Proloculus mikrosferik berdiameter 11–14 μm, sedangkan proloculus megalosferik berdiameter 23–56 μm. Chambers paling awal berbentuk sedikit trochoid, berpilin rapat, berkembang menjadi deret tidak beraturan dalam satu lapisan di sekitar periphery. Chambers selanjutnya memiliki dua apertur dan masing-masing menghasilkan chambers biapertural baru sehingga terbentuk banyak spiral dan akhirnya terbentuk whorl dari chamber. Sutura jelas, dapat menebal dan menonjol pada sisi yang melekat, tetapi umumnya cekung pada sisi yang bebas. Periphery membulat hingga agak bersudut. 
@@ -677,8 +701,8 @@ Dinding pada chambers bersifat kitin (chitinous), lalu menjadi kalsit (calcareou
             </tr>
 
             <tr>
-            <td style="font-weight: bold;text-align: center;color: white; font-size:xx-large;" width="50">A</td>
-            <td width="10" onclick="changeContent('D13')"><img src="assets/img/table/D13.png" width="50" style="margin-bottom: 17px;" />
+            <td style="font-weight: bold;text-align: center;color: white; font-size:large ;" width="40">F</td>
+            <td width="10" onclick="changeContent('D13')"><img src="assets/img/table/D13.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD13" style="display: none;" data-title="Globigerina">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -690,7 +714,7 @@ Dinding pada chambers bersifat kitin (chitinous), lalu menjadi kalsit (calcareou
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D14')"><img src="assets/img/table/D14.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D14')"><img src="assets/img/table/D14.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD14" style="display: none;" data-title="Gyroidina">
                 <h5>Karakteristik</h5>
                 <p>Cangkang membentuk spiral datar (planispiral) yang kemudian berkembang menjadi deretan uniserial besar, memanjang, lurus atau melengkung, biasanya terdiri dari tiga atau lebih ruang (chamber). Terdapat sebuah umbilikus kecil dan cekung yang tampak di pusat spiral datar. Ruang-ruangnya agak menggembung dan dipisahkan oleh sutures yang sedikit cekung. Dinding cangkang tidak berongga dan tersusun secara kasar dari partikel yang direkatkan dengan non-calcareous cement. Apertur utama berbentuk bulat dan terletak di ujung cangkang. </p>
@@ -706,7 +730,7 @@ Cushman (1920) melaporkan temuan dari 30 stasiun ekspedisi “Albatross” di At
                 <p>​​(Holbourn et al., 2013)​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D15')"><img src="assets/img/table/D15.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D15')"><img src="assets/img/table/D15.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD15" style="display: none;" data-title="Globorotalia">
                 <h5>Karakteristik</h5>
                  <p></p>
@@ -718,7 +742,7 @@ Cushman (1920) melaporkan temuan dari 30 stasiun ekspedisi “Albatross” di At
                  <p></p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D16')"><img src="assets/img/table/D16.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D16')"><img src="assets/img/table/D16.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD16" style="display: none;" data-title="Discorbis">
                  <h5>Karakteristik</h5>
                  <p>Cangkang tipe free test atau tidak melekat pada substrat, hidup bebas di dasar laut atau melayang di kolom air. Penampang cangkang melebar atau memanjang, berbentuk seperti  belah ketupat (lozenge-shaped) atau romboid dalam penampang, tepi tajam dan berangulasi. 
@@ -735,7 +759,7 @@ Apertur berupa lengkung rendah di bagian dalam tepi (interiomarginal arch) pada 
                  <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988​</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D17')"><img src="assets/img/table/D17.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D17')"><img src="assets/img/table/D17.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD17" style="display: none;" data-title="Robulus">
                 <h5>Karakteristik</h5>
                  <p>Cangkang memiliki chambers awal bertipe quinqueloculine, setidaknya pada bentuk mikrosferik. Tahap selanjutnya berbentuk pseudoiriloculine atau triloculine. Berbentuk oval dari tampak atas dan tampak segitiga sama sisi atau agak segitiga secara penampang. Chambers berikutnya berada dalam bidang yang saling berjarak 120°, masing-masing dalam bidang yang sama dengan chamber ketiga dan menutupinya sehingga bagian luar cangkang hanya terdiri dari tiga chamber yang tampak dan tiap chamber tidak memuliki dasar. Ruang-ruangnya tidak bersifat labyrinthic. Dinding cangkang tersusun dari kalsit bertekstur porcellanous, tanpa pori dan terkadang memiliki lapisan luar berbutir pasir (arenaceous). Apertur berbentuk bulat pada ujung final chamber, biasanya dilengkapi dengan struktur tooth-like pendek bercabang dua (short bifid tooth).</p>
@@ -747,7 +771,7 @@ Apertur berupa lengkung rendah di bagian dalam tepi (interiomarginal arch) pada 
                  <p>Holbourn et al., 2013<br>Cushman, 1928; Loeblich & Tappan, 1988</p>
               </div>
             </td>
-            <td width="10" onclick="changeContent('D18')"><img src="assets/img/table/D18.png" width="50" style="margin-bottom: 17px;" />
+            <td width="10" onclick="changeContent('D18')"><img src="assets/img/table/D18.png" width="40" style="margin-bottom: 17px;" />
               <div class="descD18" style="display: none;" data-title="Discorbis">
                  <h5>Karakteristik</h5>
                  <p>Cangkang pada tahap awal berupa trochospiral coil rendah dengan arah coil acak, melekat pada substrat melalui sisi spiral. Proloculus mikrosferik berdiameter 11–14 μm, sedangkan proloculus megalosferik berdiameter 23–56 μm. Chambers paling awal berbentuk sedikit trochoid, berpilin rapat, berkembang menjadi deret tidak beraturan dalam satu lapisan di sekitar periphery. Chambers selanjutnya memiliki dua apertur dan masing-masing menghasilkan chambers biapertural baru sehingga terbentuk banyak spiral dan akhirnya terbentuk whorl dari chamber. Sutura jelas, dapat menebal dan menonjol pada sisi yang melekat, tetapi umumnya cekung pada sisi yang bebas. Periphery membulat hingga agak bersudut. 
@@ -766,15 +790,22 @@ Dinding pada chambers bersifat kitin (chitinous), lalu menjadi kalsit (calcareou
         </table>
         <div style="position: absolute;top:30px;right: 0px">
         <!-- <img src="assets/img/frame.png" style="position: absolute;right: -140px;top:82px;z-index: 99">-->
-        <img id="imgreal" src="assets/img/foraminifera.jpg" style="position: absolute;right: -135px;top:87px;z-index: 98;width:463px;height:333px;object-fit:contain">
+        <img id="imgreal" src="assets/img/foraminifera.jpg" style="position: absolute;
+        right: -135px;
+        top:87px;z-index: 98;
+        width: 600px;height:333px;object-fit:contain">
         <!-- <img src="assets/img/bgreal.png" style="position: absolute;right: -140px;top:82px;z-index: 97"> -->
         <span id="titleText" style="background: url('assets/img/titlerealbg.png') no-repeat;width: 252px;height: 64px;z-index: 99999;position: absolute;
-        top: 380px;left: -220px;
+        top: 380px;left: -290px;
         text-align: center;padding: 5px; font-family: 'TitleFontLittle';line-height: 50px;
         font-size: 24px;font-weight: 600;color: #fff;text-shadow: 3px 3px 3px #000;">Foraminifera</span>
     	  </div>
           <!-- Description Section: Shows details about selected foraminifera -->
-        <div id="showDesc" style="position: absolute;right: -105px;bottom: 155px;width: 400px;max-height: 212px;overflow-y: scroll">
+        <div id="showDesc" style="position: absolute; 
+        right: -135px;
+        bottom: 85px;
+        width: 600px; 
+        max-height: 290px; overflow-y: auto">
           <p>Foraminifera, atau disingkat foram, adalah grup besar protista amoeboid dengan pseudopodia. Dalam sains modern, istilah foraminifera digunakan sebagai bentuk tunggal atau jamak dari kelompok ini dan sering kali ditulis dalam lowercase. Cangkang atau kerangka foraminifera merupakan petunjuk dalam pencarian sumber daya minyak, gas alam dan mineral. Pada beberapa genus, cangkang dari foraminifera tersusun dari kitin. Sebagian besar foraminifera hidup di laut, mayoritas hidup di dasar laut (bentos), dan beberapa hidup mengapung di perairan (plankton). Beberapa diketahui hidup di perairan air tawar, dan beberapa spesies diketahui hidup di terestrial dan telah teridentifikasi melalui analisis molekuler dari DNA ribosomal.</p>
          
         </div>

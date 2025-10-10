@@ -746,11 +746,13 @@ input[type='range']::-webkit-slider-thumb {
 
 ::-webkit-scrollbar {
   width: 24px;
+  height: 260px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: url('../img/bgscroll.png');
+  position: relative;
 }
 
 /* Handle */
@@ -770,13 +772,13 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .tabtbl1 {
-  padding:10px;text-align:center;background: url('../img/bgtitletable.png') no-repeat;position: absolute;top: 110px;z-index: 9997;left: 80px;width: 172px;height:57px;
+  padding:10px;text-align:center;background: url('../img/bgtitletable.png') no-repeat;position: absolute;top: 110px;z-index: 9997;left: 180px;width: 172px;height:57px;
 }
 .tabtbl2{
-  padding:10px;text-align:center;background: url('../img/bgtitletable.png') no-repeat;position: absolute;top: 110px;z-index: 9996;left: 240px;width: 172px;height:57px;
+  padding:10px;text-align:center;background: url('../img/bgtitletable.png') no-repeat;position: absolute;top: 110px;z-index: 9996;left: 340px;width: 172px;height:57px;
 }
 .tabtbl3{
-  padding:10px;text-align:center;background: url('../img/bgtitletable.png') no-repeat;position: absolute;top: 110px;z-index: 9995;left: 400px;width: 172px;height:57px;
+  padding:10px;text-align:center;background: url('../img/bgtitletable.png') no-repeat;position: absolute;top: 110px;z-index: 9995;left: 500px;width: 172px;height:57px;
 }
 
 .tabactive {
