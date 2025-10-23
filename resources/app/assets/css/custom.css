@@ -771,14 +771,38 @@ input[type='range']::-webkit-slider-thumb {
    background-position: center;
 }
 
+.tabtbl1, .tabtbl2, .tabtbl3 {
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  top: 110px;
+  width: 172px;
+  height: 57px;
+  box-sizing: border-box; /* include padding in the fixed size */
+  overflow: hidden; /* prevent content from overflowing the fixed box */
+  white-space: nowrap;
+  text-overflow: ellipsis; /* truncate long text to fit */
+}
+
 .tabtbl1 {
-  padding:10px;text-align:center;background: url('../img/bgtitletable.png') no-repeat;position: absolute;top: 110px;z-index: 9997;left: 180px;width: 172px;height:57px;
+  left: 180px;
+  z-index: 9997;
+  background: url('../img/bgtitletable.png') no-repeat center center;
+  background-size: 100% 100%; /* scale background to exactly fit the box */
 }
+
 .tabtbl2{
-  padding:10px;text-align:center;background: url('../img/bgtitletable.png') no-repeat;position: absolute;top: 110px;z-index: 9996;left: 340px;width: 172px;height:57px;
+  left: 340px;
+  z-index: 9996;
+  background: url('../img/bgtitletable.png') no-repeat center center;
+  background-size: 100% 100%;
 }
+
 .tabtbl3{
-  padding:10px;text-align:center;background: url('../img/bgtitletable.png') no-repeat;position: absolute;top: 110px;z-index: 9995;left: 500px;width: 172px;height:57px;
+  left: 500px;
+  z-index: 9995;
+  background: url('../img/bgtitletable.png') no-repeat center center;
+  background-size: 100% 100%;
 }
 
 .tabactive {
